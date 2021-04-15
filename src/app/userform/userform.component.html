@@ -1,4 +1,16 @@
 <h3>{{title}}</h3>
-<input [(ngModel)]='firstname'>
-<input [(ngModel)]='age'>
+<input [(ngModel)]='user.firstname'>
+<input [(ngModel)]='user.age' placeholder="age" type="number">
 <button (click)='save()'>Save</button>
+<table>
+  <thead>
+    <td>FirstName</td>
+    <td>Age</td>
+  </thead>
+  <tbody>
+    <tr *ngFor='let user of userArray'>
+      <td>{{user.firstname}}</td>
+      <td>{{user.age}}</td>
+    </tr>
+  </tbody>
+</table>
