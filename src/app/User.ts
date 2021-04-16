@@ -1,4 +1,5 @@
 export class User{//view class
-  firstname:string='Ram';
+  name:string='Ram';
   age:number=0;
+  dob:Date=new Date();
 }

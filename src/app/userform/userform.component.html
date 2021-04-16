@@ -1,15 +1,16 @@
 <h3>{{title}}</h3>
-<input [(ngModel)]='user.firstname'>
+<input [(ngModel)]='user.name'>
 <input [(ngModel)]='user.age' placeholder="age" type="number">
+<input type="date" [(ngModel)] = 'user.dob'>
 <button (click)='save()'>Save</button>
-<table>
+<table *ngIf='userArray.length'>
   <thead>
     <td>FirstName</td>
     <td>Age</td>
   </thead>
   <tbody>
     <tr *ngFor='let user of userArray'>
-      <td>{{user.firstname}}</td>
+      <td><a [href]='user.name'>{{user.name}}</a></td>
       <td>{{user.age}}</td>
     </tr>
   </tbody>
